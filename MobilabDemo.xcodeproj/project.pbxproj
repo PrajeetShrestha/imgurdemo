@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B69EBFB81CD1A4850062219F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFB71CD1A4850062219F /* AppDelegate.swift */; };
+		B69EBFBA1CD1A4850062219F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFB91CD1A4850062219F /* ViewController.swift */; };
+		B69EBFBD1CD1A4850062219F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFBB1CD1A4850062219F /* Main.storyboard */; };
+		B69EBFC01CD1A4850062219F /* MobilabDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFBE1CD1A4850062219F /* MobilabDemo.xcdatamodeld */; };
+		B69EBFC21CD1A4850062219F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFC11CD1A4850062219F /* Assets.xcassets */; };
+		B69EBFC51CD1A4850062219F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */; };
+		B69EBFD01CD1A4850062219F /* MobilabDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFCF1CD1A4850062219F /* MobilabDemoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B69EBFCC1CD1A4850062219F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B69EBFAC1CD1A4840062219F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B69EBFB31CD1A4850062219F;
+			remoteInfo = MobilabDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B69EBFB41CD1A4850062219F /* MobilabDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilabDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B69EBFB71CD1A4850062219F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B69EBFB91CD1A4850062219F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B69EBFBC1CD1A4850062219F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B69EBFBF1CD1A4850062219F /* MobilabDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobilabDemo.xcdatamodel; sourceTree = "<group>"; };
+		B69EBFC11CD1A4850062219F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B69EBFC41CD1A4850062219F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B69EBFC61CD1A4850062219F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B69EBFCB1CD1A4850062219F /* MobilabDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilabDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B69EBFCF1CD1A4850062219F /* MobilabDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilabDemoTests.swift; sourceTree = "<group>"; };
+		B69EBFD11CD1A4850062219F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B69EBFB11CD1A4850062219F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B69EBFC81CD1A4850062219F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B69EBFAB1CD1A4840062219F = {
+			isa = PBXGroup;
+			children = (
+				B69EBFB61CD1A4850062219F /* MobilabDemo */,
+				B69EBFCE1CD1A4850062219F /* MobilabDemoTests */,
+				B69EBFB51CD1A4850062219F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B69EBFB51CD1A4850062219F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B69EBFB41CD1A4850062219F /* MobilabDemo.app */,
+				B69EBFCB1CD1A4850062219F /* MobilabDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B69EBFB61CD1A4850062219F /* MobilabDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B69EBFB71CD1A4850062219F /* AppDelegate.swift */,
+				B69EBFB91CD1A4850062219F /* ViewController.swift */,
+				B69EBFBB1CD1A4850062219F /* Main.storyboard */,
+				B69EBFC11CD1A4850062219F /* Assets.xcassets */,
+				B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */,
+				B69EBFC61CD1A4850062219F /* Info.plist */,
+				B69EBFBE1CD1A4850062219F /* MobilabDemo.xcdatamodeld */,
+			);
+			path = MobilabDemo;
+			sourceTree = "<group>";
+		};
+		B69EBFCE1CD1A4850062219F /* MobilabDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B69EBFCF1CD1A4850062219F /* MobilabDemoTests.swift */,
+				B69EBFD11CD1A4850062219F /* Info.plist */,
+			);
+			path = MobilabDemoTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B69EBFB31CD1A4850062219F /* MobilabDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69EBFD41CD1A4850062219F /* Build configuration list for PBXNativeTarget "MobilabDemo" */;
+			buildPhases = (
+				B69EBFB01CD1A4850062219F /* Sources */,
+				B69EBFB11CD1A4850062219F /* Frameworks */,
+				B69EBFB21CD1A4850062219F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobilabDemo;
+			productName = MobilabDemo;
+			productReference = B69EBFB41CD1A4850062219F /* MobilabDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B69EBFCA1CD1A4850062219F /* MobilabDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69EBFD71CD1A4850062219F /* Build configuration list for PBXNativeTarget "MobilabDemoTests" */;
+			buildPhases = (
+				B69EBFC71CD1A4850062219F /* Sources */,
+				B69EBFC81CD1A4850062219F /* Frameworks */,
+				B69EBFC91CD1A4850062219F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B69EBFCD1CD1A4850062219F /* PBXTargetDependency */,
+			);
+			name = MobilabDemoTests;
+			productName = MobilabDemoTests;
+			productReference = B69EBFCB1CD1A4850062219F /* MobilabDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B69EBFAC1CD1A4840062219F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Prajeet Shrestha";
+				TargetAttributes = {
+					B69EBFB31CD1A4850062219F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					B69EBFCA1CD1A4850062219F = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = B69EBFB31CD1A4850062219F;
+					};
+				};
+			};
+			buildConfigurationList = B69EBFAF1CD1A4840062219F /* Build configuration list for PBXProject "MobilabDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B69EBFAB1CD1A4840062219F;
+			productRefGroup = B69EBFB51CD1A4850062219F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B69EBFB31CD1A4850062219F /* MobilabDemo */,
+				B69EBFCA1CD1A4850062219F /* MobilabDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B69EBFB21CD1A4850062219F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69EBFC51CD1A4850062219F /* LaunchScreen.storyboard in Resources */,
+				B69EBFC21CD1A4850062219F /* Assets.xcassets in Resources */,
+				B69EBFBD1CD1A4850062219F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B69EBFC91CD1A4850062219F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B69EBFB01CD1A4850062219F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69EBFC01CD1A4850062219F /* MobilabDemo.xcdatamodeld in Sources */,
+				B69EBFBA1CD1A4850062219F /* ViewController.swift in Sources */,
+				B69EBFB81CD1A4850062219F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B69EBFC71CD1A4850062219F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69EBFD01CD1A4850062219F /* MobilabDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B69EBFCD1CD1A4850062219F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B69EBFB31CD1A4850062219F /* MobilabDemo */;
+			targetProxy = B69EBFCC1CD1A4850062219F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B69EBFBB1CD1A4850062219F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B69EBFBC1CD1A4850062219F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B69EBFC41CD1A4850062219F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B69EBFD21CD1A4850062219F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B69EBFD31CD1A4850062219F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B69EBFD51CD1A4850062219F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobilabDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.www.MobilabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B69EBFD61CD1A4850062219F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobilabDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.www.MobilabDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B69EBFD81CD1A4850062219F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MobilabDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.www.MobilabDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobilabDemo.app/MobilabDemo";
+			};
+			name = Debug;
+		};
+		B69EBFD91CD1A4850062219F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MobilabDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.www.MobilabDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobilabDemo.app/MobilabDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69EBFAF1CD1A4840062219F /* Build configuration list for PBXProject "MobilabDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69EBFD21CD1A4850062219F /* Debug */,
+				B69EBFD31CD1A4850062219F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B69EBFD41CD1A4850062219F /* Build configuration list for PBXNativeTarget "MobilabDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69EBFD51CD1A4850062219F /* Debug */,
+				B69EBFD61CD1A4850062219F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B69EBFD71CD1A4850062219F /* Build configuration list for PBXNativeTarget "MobilabDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69EBFD81CD1A4850062219F /* Debug */,
+				B69EBFD91CD1A4850062219F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B69EBFBE1CD1A4850062219F /* MobilabDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B69EBFBF1CD1A4850062219F /* MobilabDemo.xcdatamodel */,
+			);
+			currentVersion = B69EBFBF1CD1A4850062219F /* MobilabDemo.xcdatamodel */;
+			path = MobilabDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B69EBFAC1CD1A4840062219F /* Project object */;
+}
