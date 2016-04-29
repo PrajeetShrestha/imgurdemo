@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B69EBFB81CD1A4850062219F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFB71CD1A4850062219F /* AppDelegate.swift */; };
-		B69EBFBA1CD1A4850062219F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFB91CD1A4850062219F /* ViewController.swift */; };
+		B69EBFBA1CD1A4850062219F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFB91CD1A4850062219F /* FilterViewController.swift */; };
 		B69EBFBD1CD1A4850062219F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFBB1CD1A4850062219F /* Main.storyboard */; };
 		B69EBFC01CD1A4850062219F /* MobilabDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFBE1CD1A4850062219F /* MobilabDemo.xcdatamodeld */; };
 		B69EBFC21CD1A4850062219F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFC11CD1A4850062219F /* Assets.xcassets */; };
 		B69EBFC51CD1A4850062219F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */; };
-		B69EBFD01CD1A4850062219F /* MobilabDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFCF1CD1A4850062219F /* MobilabDemoTests.swift */; };
+		B69EBFDB1CD1A49E0062219F /* FetchImageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFDA1CD1A49E0062219F /* FetchImageProtocol.swift */; };
+		B69EBFE01CD23A210062219F /* IMGURImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFDF1CD23A210062219F /* IMGURImage.swift */; };
+		B6AD0EC01CD253BF006392E6 /* CustomDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD0EBF1CD253BF006392E6 /* CustomDataTypes.swift */; };
+		B6BD75131CD2E334003396C7 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD75121CD2E334003396C7 /* ContainerViewController.swift */; };
+		B6BD75151CD2E3D6003396C7 /* ContainerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD75141CD2E3D6003396C7 /* ContainerViewControllerTests.swift */; };
+		B6BD75171CD2E606003396C7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD75161CD2E606003396C7 /* ListViewController.swift */; };
+		B6BD75191CD2E60E003396C7 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD75181CD2E60E003396C7 /* GridViewController.swift */; };
+		B6BD751B1CD2E721003396C7 /* IMGURApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */; };
+		B6BD751D1CD2F38B003396C7 /* FilterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD751C1CD2F38B003396C7 /* FilterViewControllerTests.swift */; };
+		B6BD751E1CD2FF1A003396C7 /* IMGURFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD0EC31CD27C2E006392E6 /* IMGURFilter.swift */; };
+		D45F8AD0A9B896C1DD518C15 /* Pods_MobilabDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AEA9A936DAF3BE0A87C4DC /* Pods_MobilabDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +37,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24AEA9A936DAF3BE0A87C4DC /* Pods_MobilabDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilabDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F803480F40C93F638DA13B /* Pods-MobilabDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilabDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B69EBFB41CD1A4850062219F /* MobilabDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilabDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69EBFB71CD1A4850062219F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B69EBFB91CD1A4850062219F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B69EBFB91CD1A4850062219F /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		B69EBFBC1CD1A4850062219F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B69EBFBF1CD1A4850062219F /* MobilabDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobilabDemo.xcdatamodel; sourceTree = "<group>"; };
 		B69EBFC11CD1A4850062219F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B69EBFC41CD1A4850062219F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B69EBFC61CD1A4850062219F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B69EBFCB1CD1A4850062219F /* MobilabDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilabDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B69EBFCF1CD1A4850062219F /* MobilabDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilabDemoTests.swift; sourceTree = "<group>"; };
 		B69EBFD11CD1A4850062219F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B69EBFDA1CD1A49E0062219F /* FetchImageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchImageProtocol.swift; sourceTree = "<group>"; };
+		B69EBFDF1CD23A210062219F /* IMGURImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURImage.swift; sourceTree = "<group>"; };
+		B6AD0EBF1CD253BF006392E6 /* CustomDataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDataTypes.swift; sourceTree = "<group>"; };
+		B6AD0EC31CD27C2E006392E6 /* IMGURFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURFilter.swift; sourceTree = "<group>"; };
+		B6BD75121CD2E334003396C7 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		B6BD75141CD2E3D6003396C7 /* ContainerViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerTests.swift; sourceTree = "<group>"; };
+		B6BD75161CD2E606003396C7 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B6BD75181CD2E60E003396C7 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURApiService.swift; sourceTree = "<group>"; };
+		B6BD751C1CD2F38B003396C7 /* FilterViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewControllerTests.swift; sourceTree = "<group>"; };
+		EE6055BBF9DA189BFC458B57 /* Pods-MobilabDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilabDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45F8AD0A9B896C1DD518C15 /* Pods_MobilabDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A31D152914AB1910738208CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24AEA9A936DAF3BE0A87C4DC /* Pods_MobilabDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B69EBFAB1CD1A4840062219F = {
 			isa = PBXGroup;
 			children = (
 				B69EBFB61CD1A4850062219F /* MobilabDemo */,
 				B69EBFCE1CD1A4850062219F /* MobilabDemoTests */,
 				B69EBFB51CD1A4850062219F /* Products */,
+				E0C27F881564644F421CB1D4 /* Pods */,
+				A31D152914AB1910738208CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +113,14 @@
 			isa = PBXGroup;
 			children = (
 				B69EBFB71CD1A4850062219F /* AppDelegate.swift */,
-				B69EBFB91CD1A4850062219F /* ViewController.swift */,
+				B69EBFDE1CD23A0F0062219F /* Model */,
+				B6AD0EBE1CD253BF006392E6 /* Globals */,
+				B69EBFB91CD1A4850062219F /* FilterViewController.swift */,
+				B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */,
+				B6BD75121CD2E334003396C7 /* ContainerViewController.swift */,
+				B6BD75161CD2E606003396C7 /* ListViewController.swift */,
+				B6BD75181CD2E60E003396C7 /* GridViewController.swift */,
+				B69EBFDA1CD1A49E0062219F /* FetchImageProtocol.swift */,
 				B69EBFBB1CD1A4850062219F /* Main.storyboard */,
 				B69EBFC11CD1A4850062219F /* Assets.xcassets */,
 				B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */,
@@ -93,10 +133,37 @@
 		B69EBFCE1CD1A4850062219F /* MobilabDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				B69EBFCF1CD1A4850062219F /* MobilabDemoTests.swift */,
+				B6BD75141CD2E3D6003396C7 /* ContainerViewControllerTests.swift */,
+				B6BD751C1CD2F38B003396C7 /* FilterViewControllerTests.swift */,
 				B69EBFD11CD1A4850062219F /* Info.plist */,
 			);
 			path = MobilabDemoTests;
+			sourceTree = "<group>";
+		};
+		B69EBFDE1CD23A0F0062219F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B69EBFDF1CD23A210062219F /* IMGURImage.swift */,
+				B6AD0EC31CD27C2E006392E6 /* IMGURFilter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B6AD0EBE1CD253BF006392E6 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				B6AD0EBF1CD253BF006392E6 /* CustomDataTypes.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		E0C27F881564644F421CB1D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE6055BBF9DA189BFC458B57 /* Pods-MobilabDemo.debug.xcconfig */,
+				63F803480F40C93F638DA13B /* Pods-MobilabDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B69EBFD41CD1A4850062219F /* Build configuration list for PBXNativeTarget "MobilabDemo" */;
 			buildPhases = (
+				2574B88F053DB544DD3F9022 /* Check Pods Manifest.lock */,
 				B69EBFB01CD1A4850062219F /* Sources */,
 				B69EBFB11CD1A4850062219F /* Frameworks */,
 				B69EBFB21CD1A4850062219F /* Resources */,
+				9CBB04998D88E2BE11D54C39 /* Embed Pods Frameworks */,
+				210A609E50DF053A2C9E37AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,14 +265,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		210A609E50DF053A2C9E37AD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2574B88F053DB544DD3F9022 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CBB04998D88E2BE11D54C39 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B69EBFB01CD1A4850062219F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B69EBFC01CD1A4850062219F /* MobilabDemo.xcdatamodeld in Sources */,
-				B69EBFBA1CD1A4850062219F /* ViewController.swift in Sources */,
+				B69EBFBA1CD1A4850062219F /* FilterViewController.swift in Sources */,
+				B6AD0EC01CD253BF006392E6 /* CustomDataTypes.swift in Sources */,
+				B6BD751E1CD2FF1A003396C7 /* IMGURFilter.swift in Sources */,
+				B69EBFE01CD23A210062219F /* IMGURImage.swift in Sources */,
+				B6BD75191CD2E60E003396C7 /* GridViewController.swift in Sources */,
+				B69EBFDB1CD1A49E0062219F /* FetchImageProtocol.swift in Sources */,
+				B6BD75131CD2E334003396C7 /* ContainerViewController.swift in Sources */,
+				B6BD75171CD2E606003396C7 /* ListViewController.swift in Sources */,
 				B69EBFB81CD1A4850062219F /* AppDelegate.swift in Sources */,
+				B6BD751B1CD2E721003396C7 /* IMGURApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B69EBFD01CD1A4850062219F /* MobilabDemoTests.swift in Sources */,
+				B6BD751D1CD2F38B003396C7 /* FilterViewControllerTests.swift in Sources */,
+				B6BD75151CD2E3D6003396C7 /* ContainerViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +456,7 @@
 		};
 		B69EBFD51CD1A4850062219F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6055BBF9DA189BFC458B57 /* Pods-MobilabDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobilabDemo/Info.plist;
@@ -340,6 +468,7 @@
 		};
 		B69EBFD61CD1A4850062219F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63F803480F40C93F638DA13B /* Pods-MobilabDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobilabDemo/Info.plist;
@@ -392,6 +521,7 @@
 				B69EBFD61CD1A4850062219F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B69EBFD71CD1A4850062219F /* Build configuration list for PBXNativeTarget "MobilabDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +530,7 @@
 				B69EBFD91CD1A4850062219F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
