@@ -19,6 +19,7 @@ class GridViewController: AbstractDisplayController {
         self.collectionView.delegate      = self.dataProvider
         self.dataProvider?.collectionView = self.collectionView
         self.dataProvider?.collectionView.reloadData()
+        self.dataProvider?.controller = self
     }
     override  func reloadViews(imageList:[IMGURImage]){
         super.reloadViews(imageList)

@@ -40,7 +40,6 @@ class DetailController: UIViewController {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         let scaleFactor           = CGFloat(image.height! / image.width!)
         heightConstraint.constant = size.width * CGFloat(scaleFactor)
-        print(heightConstraint.constant)
         self.view.layoutIfNeeded()
     }
     @IBAction func close(sender: AnyObject) {

@@ -520,20 +520,6 @@
                                             <constraint firstItem="iHC-qC-QXO" firstAttribute="bottom" secondItem="h0m-3c-edS" secondAttribute="bottom" id="zee-g0-fhQ"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vx-hE-yqn">
-                                        <rect key="frame" x="540" y="28" width="40" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="28c-Hk-d8c"/>
-                                            <constraint firstAttribute="width" secondItem="1vx-hE-yqn" secondAttribute="height" multiplier="165:164" id="evx-Ra-ABK"/>
-                                        </constraints>
-                                        <state key="normal" image="close_button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="close:" destination="Fao-9e-vrB" eventType="touchUpInside" id="HKf-hV-ywR"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="EQd-5G-YTm" firstAttribute="leading" secondItem="EDH-Xd-MSz" secondAttribute="leading" id="7Wp-Wn-0mg"/>
@@ -544,16 +530,30 @@
                                     <constraint firstItem="uIj-WC-b8n" firstAttribute="top" secondItem="EQd-5G-YTm" secondAttribute="bottom" id="erG-Bg-MkE"/>
                                     <constraint firstItem="EQd-5G-YTm" firstAttribute="top" secondItem="EDH-Xd-MSz" secondAttribute="top" id="etj-iz-Im4"/>
                                     <constraint firstItem="uIj-WC-b8n" firstAttribute="centerX" secondItem="EDH-Xd-MSz" secondAttribute="centerX" id="lbY-Nc-9CV"/>
-                                    <constraint firstItem="1vx-hE-yqn" firstAttribute="top" secondItem="EDH-Xd-MSz" secondAttribute="topMargin" constant="20" id="u0j-h0-fJi"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vx-hE-yqn">
+                                <rect key="frame" x="540" y="28" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="28c-Hk-d8c"/>
+                                    <constraint firstAttribute="width" secondItem="1vx-hE-yqn" secondAttribute="height" multiplier="165:164" id="evx-Ra-ABK"/>
+                                </constraints>
+                                <state key="normal" image="close_button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="Fao-9e-vrB" eventType="touchUpInside" id="HKf-hV-ywR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1vx-hE-yqn" firstAttribute="top" secondItem="qBw-yv-tce" secondAttribute="bottom" constant="8" id="3Wv-HT-ekw"/>
                             <constraint firstAttribute="trailing" secondItem="EDH-Xd-MSz" secondAttribute="trailing" id="3yN-Zx-0FQ"/>
                             <constraint firstItem="EDH-Xd-MSz" firstAttribute="top" secondItem="P0O-eK-jcU" secondAttribute="top" constant="20" id="Cxz-1B-GIf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1vx-hE-yqn" secondAttribute="trailing" id="IuP-65-WGr"/>
                             <constraint firstItem="EDH-Xd-MSz" firstAttribute="leading" secondItem="P0O-eK-jcU" secondAttribute="leading" id="Xdt-Xp-HLN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1vx-hE-yqn" secondAttribute="trailing" id="cSO-TQ-pun"/>
                             <constraint firstItem="1fe-v5-O2e" firstAttribute="top" secondItem="EDH-Xd-MSz" secondAttribute="bottom" id="f64-IU-xSr"/>
                         </constraints>
                     </view>

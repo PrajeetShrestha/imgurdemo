@@ -9,6 +9,7 @@
 import UIKit
 
 class ImageGridDataProvider: NSObject, ImageGridDataProviderProtocol {
+    var controller:UIViewController!
     weak var collectionView: UICollectionView!
     var imageList:[IMGURImage] = [IMGURImage]()
     
@@ -32,6 +33,8 @@ extension ImageGridDataProvider: UICollectionViewDataSource {
         
     }
     
+    
+    
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == imageList.count - 1 {
             NSNotificationCenter.defaultCenter().postNotificationName(kEndOfListReached, object: nil)
@@ -44,6 +47,12 @@ extension ImageGridDataProvider: UICollectionViewDataSource {
         let width:CGFloat = (self.collectionView.frame.size.width - 10) / 2
         let cellSize:CGSize = CGSizeMake(width, width)
         return cellSize
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let detailController = self.controller.storyboard?.instantiateViewControllerWithIdentifier("DetailController") as! DetailController
+        detailController.image = self.imageList[indexPath.row]
+        self.controller.showDetailViewController(detailController, sender: nil)
     }
     
     func insertViewsAtIndexPaths(indexPaths:[NSIndexPath],updatedList:[IMGURImage]) {
