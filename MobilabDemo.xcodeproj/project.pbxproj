@@ -32,6 +32,7 @@
 		B6C66D0F1CD4FFD9001503E1 /* IMGURFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D0E1CD4FFD9001503E1 /* IMGURFilterTests.swift */; };
 		B6C66D121CD5AA4A001503E1 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D111CD5AA4A001503E1 /* GridCell.swift */; };
 		B6C66D151CD5BEB4001503E1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D141CD5BEB4001503E1 /* Utils.swift */; };
+		B6C66D171CD5C31A001503E1 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D161CD5C31A001503E1 /* DetailController.swift */; };
 		D45F8AD0A9B896C1DD518C15 /* Pods_MobilabDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AEA9A936DAF3BE0A87C4DC /* Pods_MobilabDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		B6C66D0E1CD4FFD9001503E1 /* IMGURFilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURFilterTests.swift; sourceTree = "<group>"; };
 		B6C66D111CD5AA4A001503E1 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 		B6C66D141CD5BEB4001503E1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B6C66D161CD5C31A001503E1 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		EE6055BBF9DA189BFC458B57 /* Pods-MobilabDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilabDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				B6C66D131CD5AA50001503E1 /* GridList */,
 				B6C66D101CD5AA35001503E1 /* ImageList */,
 				B6BD75211CD2FF79003396C7 /* FilterViewController.swift */,
+				B6C66D161CD5C31A001503E1 /* DetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				B6BD75241CD2FF79003396C7 /* ContainerViewController.swift in Sources */,
 				B6BD75251CD2FF79003396C7 /* FilterViewController.swift in Sources */,
 				B6BD752F1CD3B5DF003396C7 /* ImageListDataProvider.swift in Sources */,
+				B6C66D171CD5C31A001503E1 /* DetailController.swift in Sources */,
 				B6C66D0D1CD45FA3001503E1 /* AbstractDisplayController.swift in Sources */,
 				B6BD751E1CD2FF1A003396C7 /* IMGURFilter.swift in Sources */,
 				B6BD75271CD2FF79003396C7 /* ListViewController.swift in Sources */,

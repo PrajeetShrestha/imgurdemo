@@ -18,6 +18,7 @@ class ListViewController: AbstractDisplayController {
         self.tableView.delegate      = self.dataProvider
         self.dataProvider?.tableView = self.tableView
         self.dataProvider?.reload()
+        self.dataProvider?.controller = self
     }
     override  func reloadViews(imageList:[IMGURImage]){
         super.reloadViews(imageList)

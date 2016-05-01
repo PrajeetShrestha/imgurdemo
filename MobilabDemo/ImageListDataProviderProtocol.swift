@@ -11,6 +11,7 @@ protocol DataProviderDelegate {
     func endOfListReached()
 }
 protocol ImageListDataProviderProtocol: UITableViewDataSource, UITableViewDelegate {
+    var controller:UIViewController! {get set}
     weak var tableView: UITableView! { get set }
     var imageList:[IMGURImage] {get set}
     func reload()

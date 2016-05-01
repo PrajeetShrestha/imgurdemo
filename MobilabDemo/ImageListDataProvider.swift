@@ -12,6 +12,7 @@ import SDWebImage
 
 
 class ImageListDataProvider: NSObject, ImageListDataProviderProtocol {
+    var controller:UIViewController!
     weak var tableView: UITableView!
     var cellIdentifier: String!
     var imageList:[IMGURImage] = [IMGURImage]()
@@ -20,7 +21,7 @@ class ImageListDataProvider: NSObject, ImageListDataProviderProtocol {
     }
 }
 
-extension ImageListDataProvider: UITableViewDataSource {
+extension ImageListDataProvider {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.imageList.count
     }
@@ -31,6 +32,12 @@ extension ImageListDataProvider: UITableViewDataSource {
 //        let height = tableView.frame.size.width * CGFloat(scaleFactor)
 //        return height
 //    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detailController = self.controller.storyboard?.instantiateViewControllerWithIdentifier("DetailController") as! DetailController
+        detailController.image = self.imageList[indexPath.row]
+        self.controller.showDetailViewController(detailController, sender: nil)
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let image       = self.imageList[indexPath.row]
