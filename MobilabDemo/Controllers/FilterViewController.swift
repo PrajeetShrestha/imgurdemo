@@ -34,8 +34,6 @@ class FilterViewController: UIViewController {
     
     func populateUIForFilter(fltr:IMGURFilter) {
         print(self.filter.description() )
-        
-        
         self.hotSegment.selectedSegmentIndex = IMGURSection.allValues.indexOf(fltr.section!)!
         let shouldShowFilter = fltr.shouldFilterViral == IMGURShowViral.True ? true : false
         self.showViral.setOn(shouldShowFilter, animated: false)
@@ -88,6 +86,7 @@ extension FilterViewController {
         default:
             break
         }
+        self.filter.shouldFilterViral =  self.showViral.on ? .True : .False
         self.populateUIForFilter(self.filter)
     }
     
