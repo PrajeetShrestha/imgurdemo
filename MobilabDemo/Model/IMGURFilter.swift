@@ -67,6 +67,7 @@ class IMGURFilter {
                 "page":0 //Page is added as 0 becausse we dont want page to be saved. User will browse from the beginning with previous filter.
         ]
         defaults.setObject(filterDictionary, forKey: kIMGURFilterDefaultKey)
+        defaults.synchronize()  
     }
     
     func description () -> [String:AnyObject] {

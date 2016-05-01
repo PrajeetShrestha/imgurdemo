@@ -144,7 +144,7 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
         super.prepareForSegue(segue, sender: sender)
         let filterController = segue.destinationViewController as? FilterViewController
         filterController?.delegate = self
-        filterController?.filter   = self.filter
+        filterController?.filter   = IMGURFilter.getFilterFromUserDefaults()
         
     }
     //MARK: FilterViewControllerDelegate

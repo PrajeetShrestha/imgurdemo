@@ -42,7 +42,7 @@ class IMGURFilterTests: XCTestCase {
         filter.window = .Day
         filter.saveToUserDefaultsAsDictionary(testDefault!)
         let fetchedFilter = IMGURFilter.getFilterFromUserDefaults(testDefault!)!
-        if fetchedFilter.section == .User && fetchedFilter.page == 100 && fetchedFilter.window == .Day && fetchedFilter.sort == .Top {
+        if fetchedFilter.section == .User && fetchedFilter.page == 0 && fetchedFilter.window == .Day && fetchedFilter.sort == .Top {
             XCTAssert(true, "Fetched correct data from the user defaults")
         } else {
             XCTAssert(false, "Did not fetched correct data from the user defaults")

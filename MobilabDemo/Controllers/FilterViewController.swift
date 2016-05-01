@@ -33,6 +33,9 @@ class FilterViewController: UIViewController {
     }
     
     func populateUIForFilter(fltr:IMGURFilter) {
+        print(self.filter.description() )
+        
+        
         self.hotSegment.selectedSegmentIndex = IMGURSection.allValues.indexOf(fltr.section!)!
         let shouldShowFilter = fltr.shouldFilterViral == IMGURShowViral.True ? true : false
         self.showViral.setOn(shouldShowFilter, animated: false)
@@ -103,6 +106,8 @@ extension FilterViewController {
     @IBAction func doneAction(sender: AnyObject) {
         if let delegate = self.delegate {
             //print("Saving filter with value \(self.filter.description())")
+        
+            print("Saving ------\(self.filter.description())")
             self.filter.saveToUserDefaultsAsDictionary()
             delegate.filterSelected(self.filter!)
             self.navigationController?.popViewControllerAnimated(true)

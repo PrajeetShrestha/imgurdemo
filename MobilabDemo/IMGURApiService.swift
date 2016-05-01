@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 //e4b57d1339155a7
-let kIMGURHeader  = ["Authorization": "Client-ID e4" ]
+let kIMGURHeader  = ["Authorization": "Client-ID e4b57d1339155a7" ]
 let kIMGURBaseURL = "https://api.imgur.com/3/"
 let kIMGURGallery = kIMGURBaseURL + "gallery/"
 

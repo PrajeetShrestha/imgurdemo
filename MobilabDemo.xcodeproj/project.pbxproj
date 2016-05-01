@@ -34,6 +34,7 @@
 		B6C66D151CD5BEB4001503E1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D141CD5BEB4001503E1 /* Utils.swift */; };
 		B6C66D171CD5C31A001503E1 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D161CD5C31A001503E1 /* DetailController.swift */; };
 		B6C66D261CD5E162001503E1 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D251CD5E162001503E1 /* CollectionViewWaterfallLayout.swift */; };
+		B6C66D291CD60A70001503E1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D281CD60A70001503E1 /* AboutViewController.swift */; };
 		D45F8AD0A9B896C1DD518C15 /* Pods_MobilabDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AEA9A936DAF3BE0A87C4DC /* Pods_MobilabDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		B6C66D141CD5BEB4001503E1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B6C66D161CD5C31A001503E1 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		B6C66D251CD5E162001503E1 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		B6C66D281CD60A70001503E1 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		EE6055BBF9DA189BFC458B57 /* Pods-MobilabDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilabDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +140,7 @@
 				B6BD751F1CD2FF79003396C7 /* Controllers */,
 				B69EBFDE1CD23A0F0062219F /* Model */,
 				B6AD0EBE1CD253BF006392E6 /* Globals */,
-				B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */,
+				B6C66D271CD60A47001503E1 /* Services */,
 				B69EBFC11CD1A4850062219F /* Assets.xcassets */,
 				B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */,
 				B69EBFC61CD1A4850062219F /* Info.plist */,
@@ -187,6 +189,7 @@
 				B6C66D101CD5AA35001503E1 /* ImageList */,
 				B6BD75211CD2FF79003396C7 /* FilterViewController.swift */,
 				B6C66D161CD5C31A001503E1 /* DetailController.swift */,
+				B6C66D281CD60A70001503E1 /* AboutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +215,14 @@
 				B6C66D111CD5AA4A001503E1 /* GridCell.swift */,
 			);
 			name = Grid;
+			sourceTree = "<group>";
+		};
+		B6C66D271CD60A47001503E1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		E0C27F881564644F421CB1D4 /* Pods */ = {
@@ -378,6 +389,7 @@
 				B69EBFC01CD1A4850062219F /* MobilabDemo.xcdatamodeld in Sources */,
 				B6C66D261CD5E162001503E1 /* CollectionViewWaterfallLayout.swift in Sources */,
 				B6C66D121CD5AA4A001503E1 /* GridCell.swift in Sources */,
+				B6C66D291CD60A70001503E1 /* AboutViewController.swift in Sources */,
 				B6BD75361CD3D489003396C7 /* ImageListCell.swift in Sources */,
 				B6AD0EC01CD253BF006392E6 /* Globals.swift in Sources */,
 				B6BD75241CD2FF79003396C7 /* ContainerViewController.swift in Sources */,
