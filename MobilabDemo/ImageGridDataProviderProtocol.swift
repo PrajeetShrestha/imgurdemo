@@ -12,4 +12,7 @@ protocol ImageGridDataProviderProtocol: UICollectionViewDataSource, UICollection
     weak var collectionView: UICollectionView! { get set }
     var imageList:[IMGURImage] {get set}
     func insertViewsAtIndexPaths(indexPaths:[NSIndexPath],updatedList:[IMGURImage])
+    func updateCellSizes()
+    func setupCollectionViewLayout()
+    
 }

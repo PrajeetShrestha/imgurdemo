@@ -612,6 +612,95 @@
             </objects>
             <point key="canvasLocation" x="647" y="1072"/>
         </scene>
+        <!--Photo Stream View Controller-->
+        <scene sceneID="uVe-Vf-ofU">
+            <objects>
+                <collectionViewController storyboardIdentifier="PhotoStreamViewController" id="vIT-VQ-Mgv" customClass="PhotoStreamViewController" customModule="MobilabDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QBq-v1-MGp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="kf0-J7-dEk" customClass="PinterestLayout" customModule="MobilabDemo" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnnotatedPhotoCell" id="Ihg-7z-4Zc" customClass="AnnotatedPhotoCell" customModule="MobilabDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="sXt-xE-UUu" customClass="RoundedCornersView" customModule="MobilabDemo" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-as-NLd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="120"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="y69-ch-1C7"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07n-Ew-caL">
+                                                    <rect key="frame" x="4" y="124" width="172" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="GPU-oY-t89"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxn-NM-kLG">
+                                                    <rect key="frame" x="4" y="141" width="172" height="14"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.42745098040000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="07n-Ew-caL" firstAttribute="top" secondItem="BQU-as-NLd" secondAttribute="bottom" constant="4" id="Xam-xi-WJW"/>
+                                                <constraint firstAttribute="trailing" secondItem="07n-Ew-caL" secondAttribute="trailing" constant="4" id="aAR-pl-pJQ"/>
+                                                <constraint firstItem="mxn-NM-kLG" firstAttribute="top" secondItem="07n-Ew-caL" secondAttribute="bottom" id="ddA-ww-WHZ"/>
+                                                <constraint firstItem="BQU-as-NLd" firstAttribute="leading" secondItem="sXt-xE-UUu" secondAttribute="leading" id="gBm-XQ-mN7"/>
+                                                <constraint firstAttribute="trailing" secondItem="mxn-NM-kLG" secondAttribute="trailing" constant="4" id="ghw-7l-Whg"/>
+                                                <constraint firstAttribute="trailing" secondItem="BQU-as-NLd" secondAttribute="trailing" id="gyK-DN-2q2"/>
+                                                <constraint firstItem="07n-Ew-caL" firstAttribute="leading" secondItem="sXt-xE-UUu" secondAttribute="leading" constant="4" id="hay-HM-5lL"/>
+                                                <constraint firstItem="mxn-NM-kLG" firstAttribute="leading" secondItem="sXt-xE-UUu" secondAttribute="leading" constant="4" id="hri-z9-Ymm"/>
+                                                <constraint firstItem="BQU-as-NLd" firstAttribute="top" secondItem="sXt-xE-UUu" secondAttribute="top" id="iLU-Of-UmQ"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sXt-xE-UUu" secondAttribute="trailing" id="EQC-FF-2fE"/>
+                                    <constraint firstItem="sXt-xE-UUu" firstAttribute="leading" secondItem="Ihg-7z-4Zc" secondAttribute="leading" id="VSh-Fk-Ai7"/>
+                                    <constraint firstAttribute="bottom" secondItem="sXt-xE-UUu" secondAttribute="bottom" id="b7L-eN-ve4"/>
+                                    <constraint firstItem="sXt-xE-UUu" firstAttribute="top" secondItem="Ihg-7z-4Zc" secondAttribute="top" id="lXQ-94-oAM"/>
+                                </constraints>
+                                <size key="customSize" width="180" height="180"/>
+                                <connections>
+                                    <outlet property="captionLabel" destination="07n-Ew-caL" id="tgc-z2-h6b"/>
+                                    <outlet property="commentLabel" destination="mxn-NM-kLG" id="Zpn-rw-dUE"/>
+                                    <outlet property="imageView" destination="BQU-as-NLd" id="ctO-xP-m8j"/>
+                                    <outlet property="imageViewHeightLayoutConstraint" destination="y69-ch-1C7" id="iPm-ig-AkN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="vIT-VQ-Mgv" id="BQF-o4-yJM"/>
+                            <outlet property="delegate" destination="vIT-VQ-Mgv" id="9JZ-VY-x3J"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yc1-8K-clI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="381"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Down" width="273" height="274"/>

@@ -18,12 +18,14 @@ class GridViewController: AbstractDisplayController {
         self.collectionView.dataSource    = self.dataProvider
         self.collectionView.delegate      = self.dataProvider
         self.dataProvider?.collectionView = self.collectionView
-        self.dataProvider?.collectionView.reloadData()
         self.dataProvider?.controller = self
+        self.dataProvider?.setupCollectionViewLayout()
+        self.dataProvider?.collectionView.reloadData()
     }
     override  func reloadViews(imageList:[IMGURImage]){
         super.reloadViews(imageList)
         dataProvider?.imageList = imageList
+        self.dataProvider?.updateCellSizes()
         self.dataProvider?.collectionView.reloadData()//.reload()
     }
     
@@ -35,6 +37,6 @@ class GridViewController: AbstractDisplayController {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         self.collectionView.collectionViewLayout.invalidateLayout()
     }
-
+    
 }
 
