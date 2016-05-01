@@ -30,6 +30,7 @@
 		B6BD75361CD3D489003396C7 /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD75351CD3D489003396C7 /* ImageListCell.swift */; };
 		B6C66D0D1CD45FA3001503E1 /* AbstractDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D0C1CD45FA3001503E1 /* AbstractDisplayController.swift */; };
 		B6C66D0F1CD4FFD9001503E1 /* IMGURFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D0E1CD4FFD9001503E1 /* IMGURFilterTests.swift */; };
+		B6C66D121CD5AA4A001503E1 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D111CD5AA4A001503E1 /* GridCell.swift */; };
 		D45F8AD0A9B896C1DD518C15 /* Pods_MobilabDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AEA9A936DAF3BE0A87C4DC /* Pods_MobilabDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,13 +67,14 @@
 		B6BD75221CD2FF79003396C7 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		B6BD75231CD2FF79003396C7 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B6BD752A1CD3A75A003396C7 /* ImageFetcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherTests.swift; sourceTree = "<group>"; };
-		B6BD752C1CD3B564003396C7 /* ImageListDataProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListDataProviderProtocol.swift; sourceTree = "<group>"; };
-		B6BD752E1CD3B5DF003396C7 /* ImageListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListDataProvider.swift; sourceTree = "<group>"; };
-		B6BD75301CD3C27B003396C7 /* ImageGridDataProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGridDataProviderProtocol.swift; sourceTree = "<group>"; };
-		B6BD75321CD3C2B0003396C7 /* ImageGridDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGridDataProvider.swift; sourceTree = "<group>"; };
-		B6BD75351CD3D489003396C7 /* ImageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
+		B6BD752C1CD3B564003396C7 /* ImageListDataProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageListDataProviderProtocol.swift; path = ../ImageListDataProviderProtocol.swift; sourceTree = "<group>"; };
+		B6BD752E1CD3B5DF003396C7 /* ImageListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageListDataProvider.swift; path = ../ImageListDataProvider.swift; sourceTree = "<group>"; };
+		B6BD75301CD3C27B003396C7 /* ImageGridDataProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGridDataProviderProtocol.swift; path = ../ImageGridDataProviderProtocol.swift; sourceTree = "<group>"; };
+		B6BD75321CD3C2B0003396C7 /* ImageGridDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageGridDataProvider.swift; path = ../ImageGridDataProvider.swift; sourceTree = "<group>"; };
+		B6BD75351CD3D489003396C7 /* ImageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageListCell.swift; path = ../ImageListCell.swift; sourceTree = "<group>"; };
 		B6C66D0C1CD45FA3001503E1 /* AbstractDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDisplayController.swift; sourceTree = "<group>"; };
 		B6C66D0E1CD4FFD9001503E1 /* IMGURFilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURFilterTests.swift; sourceTree = "<group>"; };
+		B6C66D111CD5AA4A001503E1 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
 		EE6055BBF9DA189BFC458B57 /* Pods-MobilabDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilabDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,12 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				B69EBFB71CD1A4850062219F /* AppDelegate.swift */,
-				B6BD75351CD3D489003396C7 /* ImageListCell.swift */,
 				B6BD751F1CD2FF79003396C7 /* Controllers */,
 				B69EBFDE1CD23A0F0062219F /* Model */,
 				B6AD0EBE1CD253BF006392E6 /* Globals */,
 				B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */,
-				B6BD75341CD3C4A2003396C7 /* ImageListDataProvider */,
 				B69EBFC11CD1A4850062219F /* Assets.xcassets */,
 				B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */,
 				B69EBFC61CD1A4850062219F /* Info.plist */,
@@ -176,22 +176,33 @@
 			children = (
 				B6BD75201CD2FF79003396C7 /* ContainerViewController.swift */,
 				B6C66D0C1CD45FA3001503E1 /* AbstractDisplayController.swift */,
-				B6BD75221CD2FF79003396C7 /* GridViewController.swift */,
-				B6BD75231CD2FF79003396C7 /* ListViewController.swift */,
+				B6C66D131CD5AA50001503E1 /* GridList */,
+				B6C66D101CD5AA35001503E1 /* ImageList */,
 				B6BD75211CD2FF79003396C7 /* FilterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		B6BD75341CD3C4A2003396C7 /* ImageListDataProvider */ = {
+		B6C66D101CD5AA35001503E1 /* ImageList */ = {
 			isa = PBXGroup;
 			children = (
+				B6BD75231CD2FF79003396C7 /* ListViewController.swift */,
+				B6BD75351CD3D489003396C7 /* ImageListCell.swift */,
 				B6BD752C1CD3B564003396C7 /* ImageListDataProviderProtocol.swift */,
 				B6BD752E1CD3B5DF003396C7 /* ImageListDataProvider.swift */,
+			);
+			name = ImageList;
+			sourceTree = "<group>";
+		};
+		B6C66D131CD5AA50001503E1 /* GridList */ = {
+			isa = PBXGroup;
+			children = (
+				B6BD75221CD2FF79003396C7 /* GridViewController.swift */,
 				B6BD75301CD3C27B003396C7 /* ImageGridDataProviderProtocol.swift */,
 				B6BD75321CD3C2B0003396C7 /* ImageGridDataProvider.swift */,
+				B6C66D111CD5AA4A001503E1 /* GridCell.swift */,
 			);
-			name = ImageListDataProvider;
+			name = GridList;
 			sourceTree = "<group>";
 		};
 		E0C27F881564644F421CB1D4 /* Pods */ = {
@@ -356,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69EBFC01CD1A4850062219F /* MobilabDemo.xcdatamodeld in Sources */,
+				B6C66D121CD5AA4A001503E1 /* GridCell.swift in Sources */,
 				B6BD75361CD3D489003396C7 /* ImageListCell.swift in Sources */,
 				B6AD0EC01CD253BF006392E6 /* CustomDataTypes.swift in Sources */,
 				B6BD75241CD2FF79003396C7 /* ContainerViewController.swift in Sources */,

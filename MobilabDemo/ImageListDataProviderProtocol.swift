@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+protocol DataProviderDelegate {
+    func endOfListReached()
+}
 protocol ImageListDataProviderProtocol: UITableViewDataSource, UITableViewDelegate {
     weak var tableView: UITableView! { get set }
     var imageList:[IMGURImage] {get set}
     func reload()
+    func insertViewsAtIndexPaths(indexPaths:[NSIndexPath],updatedList:[IMGURImage])
 }

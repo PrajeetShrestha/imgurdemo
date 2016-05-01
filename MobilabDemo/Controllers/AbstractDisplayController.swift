@@ -12,4 +12,8 @@ class AbstractDisplayController:UIViewController {
     func reloadViews(imageList:[IMGURImage]) {
         
     }
+    
+    func insertViewsAtIndexPaths(indexPaths:[NSIndexPath], updatedList:[IMGURImage]) {
+        
+    }
 }

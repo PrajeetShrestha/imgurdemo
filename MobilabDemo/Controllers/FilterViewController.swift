@@ -23,32 +23,30 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var windowContainer: UIView!
     @IBOutlet weak var showViral: UISwitch!
     var delegate:FilterViewControllerDelegate?
-    var service = IMGURApiService()
-    var page:Int = 0
-    
     var filter:IMGURFilter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Filter Settings"
-        self.filter.section = .User
-        self.populateUIForFilter()
-        // self.filter?.shouldFilterViral = showViral.on ? .True : .False
-        
+        self.populateUIForFilter(self.filter)
+        print("Fetched filter with value \(self.filter.description())")
     }
     
-    func populateUIForFilter() {
+    func populateUIForFilter(fltr:IMGURFilter) {
+        self.hotSegment.selectedSegmentIndex = IMGURSection.allValues.indexOf(fltr.section!)!
+        let shouldShowFilter = fltr.shouldFilterViral == IMGURShowViral.True ? true : false
+        self.showViral.setOn(shouldShowFilter, animated: false)
         
-        switch self.filter.section! {
+        switch fltr.section! {
         case IMGURSection.User:
             self.hideWindowFilter()
-            self.hotSegment.selectedSegmentIndex = IMGURSection.allValues.indexOf(IMGURSection.User)!
+            self.sortSegment.selectedSegmentIndex = IMGURSort.allValues.indexOf(fltr.sort!)!
             break
         case .Hot:
-            
             self.hideBothFilters()
             break
         case .Top:
+            self.windowSegment.selectedSegmentIndex = IMGURWindow.allValues.indexOf(fltr.window!)!
             self.hideSortFilter()
             break
         }
@@ -69,27 +67,25 @@ class FilterViewController: UIViewController {
         self.windowContainer.hidden = true
     }
 }
+
 //MARK: Actions
 extension FilterViewController {
     
     @IBAction func sectionSelected(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            self.hideBothFilters()
             self.filter = IMGURFilter.hot()
             break
         case 1:
-            self.hideSortFilter()
             self.filter = IMGURFilter.top()
             break
         case 2:
-            self.hideWindowFilter()
             self.filter = IMGURFilter.user()
             break
         default:
-            self.hideBothFilters()
             break
         }
+        self.populateUIForFilter(self.filter)
     }
     
     @IBAction func sortSegmentSelected(sender: UISegmentedControl) {
@@ -106,6 +102,8 @@ extension FilterViewController {
     
     @IBAction func doneAction(sender: AnyObject) {
         if let delegate = self.delegate {
+            print("Saving filter with value \(self.filter.description())")
+            self.filter.saveToUserDefaultsAsDictionary()
             delegate.filterSelected(self.filter!)
             self.navigationController?.popViewControllerAnimated(true)
         }

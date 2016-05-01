@@ -19,6 +19,12 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
         self.setUpInitialController()
         self.filter = self.setupInitialFilter()
         self.fetchImage(self.filter)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(endOfListReached), name: kEndOfListReached, object: nil)
+    }
+    
+    func endOfListReached() {
+        self.filter.page += 1
+        self.fetchAdditionalImages(self.filter)
     }
     
     func setupInitialFilter() -> IMGURFilter {
@@ -36,6 +42,24 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
                 (imgList) in
                 self.imageList = imgList!
                 self.currentViewController?.reloadViews(self.imageList)
+            }, failure: {
+                message in
+        })
+    }
+    
+    func fetchAdditionalImages(filter:IMGURFilter) {
+        IMGURApiService().getGalleryImages(
+            filter,
+            success: {
+                (imgList) in
+                var indexPaths = [NSIndexPath]()
+                let initialImgeListCount = self.imageList.count
+                self.imageList.appendContentsOf(imgList!)
+                for i in  initialImgeListCount ..< self.imageList.count {
+                    let iPath = NSIndexPath(forRow: i, inSection: 0)
+                    indexPaths.append(iPath)
+                }
+                self.currentViewController?.insertViewsAtIndexPaths(indexPaths,updatedList: self.imageList)
             }, failure: {
                 message in
         })

@@ -24,4 +24,8 @@ class ListViewController: AbstractDisplayController {
         dataProvider?.imageList = imageList
         self.dataProvider?.reload()
     }
+    
+    override     func insertViewsAtIndexPaths(indexPaths:[NSIndexPath], updatedList:[IMGURImage]) {
+        self.dataProvider?.insertViewsAtIndexPaths(indexPaths,updatedList: updatedList)
+    }
 }

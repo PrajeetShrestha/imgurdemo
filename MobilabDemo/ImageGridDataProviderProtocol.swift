@@ -7,8 +7,8 @@
 //
 
 import UIKit
-protocol ImageGridDataProviderProtocol: UICollectionViewDataSource {
+protocol ImageGridDataProviderProtocol: UICollectionViewDataSource, UICollectionViewDelegate {
     weak var collectionView: UICollectionView! { get set }
     var imageList:[IMGURImage] {get set}
-    func reload()
+    func insertViewsAtIndexPaths(indexPaths:[NSIndexPath],updatedList:[IMGURImage])
 }

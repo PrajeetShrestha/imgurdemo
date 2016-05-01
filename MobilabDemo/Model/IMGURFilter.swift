@@ -41,8 +41,9 @@ enum IMGURWindow:String {
 enum IMGURShowViral:String {
     case True = "true" //Default
     case False = "false"
+    static let allValues = [True, False]
 }
-let kIMGURFilterDefaultKey = "kIMGURFilterDefaultKey"
+
 
 class IMGURFilter {
     var section:IMGURSection?             = .Hot
@@ -66,6 +67,19 @@ class IMGURFilter {
                 "page":self.page
         ]
         defaults.setObject(filterDictionary, forKey: kIMGURFilterDefaultKey)
+    }
+    
+    func description () -> [String:AnyObject] {
+        var filterDictionary = [String:AnyObject]()
+        filterDictionary =
+            [
+                "section":self.section!.rawValue,
+                "window":self.window!.rawValue,
+                "sort":self.sort!.rawValue,
+                "shouldFilterViral":self.shouldFilterViral!.rawValue,
+                "page":self.page
+        ]
+        return filterDictionary
     }
     
     
