@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HanekeSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,15 +29,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6A89388CCC3CC9162B064199D45B7DD4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0D070EA936E17C4E92850F5F5844512</key>
+		<key>7DDF79495F24B309AF089ACC99FC1151</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5B2AB72E937F5058138B1C237D2E912</key>
 		<dict>
 			<key>primary</key>
 			<true/>

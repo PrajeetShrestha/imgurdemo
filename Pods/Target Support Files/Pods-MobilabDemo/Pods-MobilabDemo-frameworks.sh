@@ -86,10 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MobilabDemo/Alamofire.framework"
   install_framework "Pods-MobilabDemo/AlamofireObjectMapper.framework"
+  install_framework "Pods-MobilabDemo/Haneke.framework"
   install_framework "Pods-MobilabDemo/ObjectMapper.framework"
+  install_framework "Pods-MobilabDemo/SDWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MobilabDemo/Alamofire.framework"
   install_framework "Pods-MobilabDemo/AlamofireObjectMapper.framework"
+  install_framework "Pods-MobilabDemo/Haneke.framework"
   install_framework "Pods-MobilabDemo/ObjectMapper.framework"
+  install_framework "Pods-MobilabDemo/SDWebImage.framework"
 fi

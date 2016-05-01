@@ -8,6 +8,6 @@
 
 import UIKit
 
-class GridViewController: UIViewController {
+class GridViewController: AbstractDisplayController {
 
 }

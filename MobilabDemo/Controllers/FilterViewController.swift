@@ -12,7 +12,9 @@ import UIKit
  Each response is wrapped in a data tag.
  This means if you have a response, it will always be within the data field. We also include a status code and success flag in the response
  */
-
+protocol FilterViewControllerDelegate {
+    func filterSelected(filter:IMGURFilter)
+}
 class FilterViewController: UIViewController {
     @IBOutlet weak var sortSegment: UISegmentedControl!
     @IBOutlet weak var windowSegment: UISegmentedControl!
@@ -20,37 +22,36 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var sortContainer: UIView!
     @IBOutlet weak var windowContainer: UIView!
     @IBOutlet weak var showViral: UISwitch!
+    var delegate:FilterViewControllerDelegate?
+    var service = IMGURApiService()
+    var page:Int = 0
     
-    var filter:IMGURFilter?
+    var filter:IMGURFilter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Filter Settings"
-        self.configureDefaultFilter()
-    }
-    
-    func configureDefaultFilter() {
-        self.configureFilterForHotSection()
-        self.hideBothFilters()
-        self.filter?.shouldFilterViral = showViral.on ? .True : .False
+        self.filter.section = .User
+        self.populateUIForFilter()
+        // self.filter?.shouldFilterViral = showViral.on ? .True : .False
         
     }
     
-    func configureFilterForHotSection() {
-        self.filter = IMGURFilter()
-        self.filter?.section = .Hot
-    }
-    
-    func configureFilterForTopSection() {
-        self.filter                    = IMGURFilter()
-        self.filter?.section           = .Top
-        self.filter?.window            = .Day
-    }
-    
-    func configureFilterForUserSection() {
-        self.filter                    = IMGURFilter()
-        self.filter?.section           = .User
-        self.filter?.sort              = .Viral
+    func populateUIForFilter() {
+        
+        switch self.filter.section! {
+        case IMGURSection.User:
+            self.hideWindowFilter()
+            self.hotSegment.selectedSegmentIndex = IMGURSection.allValues.indexOf(IMGURSection.User)!
+            break
+        case .Hot:
+            
+            self.hideBothFilters()
+            break
+        case .Top:
+            self.hideSortFilter()
+            break
+        }
     }
     
     func hideWindowFilter() {
@@ -75,15 +76,15 @@ extension FilterViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             self.hideBothFilters()
-            self.configureFilterForHotSection()
+            self.filter = IMGURFilter.hot()
             break
         case 1:
             self.hideSortFilter()
-            self.configureFilterForTopSection()
+            self.filter = IMGURFilter.top()
             break
         case 2:
             self.hideWindowFilter()
-            self.configureFilterForUserSection()
+            self.filter = IMGURFilter.user()
             break
         default:
             self.hideBothFilters()
@@ -104,19 +105,11 @@ extension FilterViewController {
     }
     
     @IBAction func doneAction(sender: AnyObject) {
-        let path = IMGURApiService.createPath(self.filter!, page: 0)
-        
-        
-        IMGURApiService.getGalleryAt(
-            path,
-            success: {
-                (response) in
-                
-            },
-            failure: {
-                message in
-        })
-        
+        if let delegate = self.delegate {
+            delegate.filterSelected(self.filter!)
+            self.navigationController?.popViewControllerAnimated(true)
+        }
     }
+    
 }
 

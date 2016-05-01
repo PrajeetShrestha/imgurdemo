@@ -11,79 +11,45 @@ import XCTest
 
 class FilterViewControllerTests: XCTestCase {
     
+    var f:IMGURFilter!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        f  = IMGURFilter()
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
     func testCreatePathWhenSectionIsTop() {
-        var f               = IMGURFilter()
-        f.section           = .Top
-        f.sort              = .Viral
-        f.window            = .Day
-        f.shouldFilterViral = .True
         
-        let path = IMGURApiService.createPath(f, page: 0)
+        f.section = .Top
+        let path = IMGURApiService.createPath(f)
         XCTAssertEqual("top/day/0?showViral=true", path)
     }
     
     func testCreatePathWhenSectionIsUser() {
-        var f               = IMGURFilter()
-        f.section           = .User
-        f.sort              = .Viral
-        f.window            = .Day
-        f.shouldFilterViral = .True
-        
-        let path = IMGURApiService.createPath(f, page: 0)
+        f.section = .User
+        let path = IMGURApiService.createPath(f)
         XCTAssertEqual("user/viral/0?showViral=true", path)
     }
     
     func testCreatePathWhenSectionIsHot() {
-        var f               = IMGURFilter()
-        f.section           = .Hot
-        f.sort              = .Viral
-        f.window            = .Day
-        f.shouldFilterViral = .True
-        
-        let path = IMGURApiService.createPath(f, page: 0)
+        f.section = .Hot
+        let path = IMGURApiService.createPath(f)
         XCTAssertEqual("hot/0?showViral=true", path)
     }
     
     func testCreatePathForDifferentPages() {
+        f.page = 0
+        var path = IMGURApiService.createPath(f)
         
-        var f               = IMGURFilter()
-        f.section           = .Hot
-        f.sort              = .Viral
-        f.window            = .Day
-        f.shouldFilterViral = .True
-        
-        var path = IMGURApiService.createPath(f, page: 0)
         XCTAssertEqual("hot/0?showViral=true", path)
-        
-        path = IMGURApiService.createPath(f, page: 1)
+        f.page = 1
+        path = IMGURApiService.createPath(f)
         XCTAssertEqual("hot/1?showViral=true", path)
         
-        
-        path = IMGURApiService.createPath(f, page: 2)
+        f.page = 2
+        path = IMGURApiService.createPath(f)
         XCTAssertEqual("hot/2?showViral=true", path)
-        
     }
+    
+
     
 }

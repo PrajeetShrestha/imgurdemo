@@ -22,22 +22,28 @@ class ContainerViewControllerTests: XCTestCase {
     }
     
     func testListViewControllerInitialization() {
+        
         let listController = self.mainStoryboard.instantiateViewControllerWithIdentifier("ListViewController") as? ListViewController
         
         if let _ = listController {
-            XCTAssert(true,"Main storyboard has controller named ListViewController")
+            XCTAssert(true,"ListViewController in storyboard does have class ListViewController")
         } else {
-            XCTAssert(true,"Main storyboard does not have controller named ListViewController")
+            XCTAssert(false,"ListViewController in storyboard doesn't have class ListViewController")
         }
     }
     
     func testGridViewControllerInitialization() {
         let gridController = self.mainStoryboard.instantiateViewControllerWithIdentifier("GridViewController") as? GridViewController
         if let _ = gridController {
-            XCTAssert(true,"Main storyboard has controller named GridViewController")
+            XCTAssert(true,"GridViewController in storyboard does have class as GridViewController")
         } else {
-            XCTAssert(true,"Main storyboard does not have controller named GridViewController")
+            XCTAssert(false,"GridViewController in storyboard doesnt have class as GridViewController")
         }
+    }
+    
+    func testIfAPIIsCalledWithStoredFilterIfExists() {
+        let cntController = mainStoryboard.instantiateViewControllerWithIdentifier("ContainerViewController") as! ContainerViewController
+        
     }
 
 

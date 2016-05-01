@@ -14,8 +14,8 @@ class IMGURImage:Mappable {
     var objID:String?
     var title:String?
     var description:String?
-    var width:Int?
-    var height:Int?
+    var width:Double?
+    var height:Double?
     var views:Int?
     var ups:Int?
     var downs:Int?

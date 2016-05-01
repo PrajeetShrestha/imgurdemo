@@ -14,18 +14,34 @@ let kIMGURBaseURL = "https://api.imgur.com/3/"
 let kIMGURGallery = kIMGURBaseURL + "gallery/"
 
 class IMGURApiService: NSObject {
-    class func getGalleryAt(path:String, success:SuccessBlock, failure:FailureBlock) {
-        print("Initiating GET request at \(path)")
-        Alamofire.request(.GET, path + kIMGURGallery ,parameters: nil, encoding: .URL,headers: kIMGURHeader)
+    
+    func getGalleryImages(filter:IMGURFilter,success:([IMGURImage]? -> ()), failure:FailureBlock) {
+        
+        let path = IMGURApiService.createPath(filter)
+        
+        Alamofire.request(.GET, kIMGURGallery + path, parameters: nil, encoding: .URL,headers: kIMGURHeader)
             .responseJSON {
                 response in
-                if let r = response.result.value {
-                    let data = r["data"]
-                    let images = Mapper<IMGURImage>().mapArray(data)
-                    for img in images! {
-                        print(img.title!)
+                guard
+                    let r = response.result.value,
+                    let d = r["data"],
+                    let images = d as? [[String:AnyObject]]
+                    else
+                {
+                    failure(message: "Response not in proper format!")
+                    return
+                }
+                
+                var imgurImages = [IMGURImage]()
+                for img in images {
+                    if let isAlbum = img["is_album"] as? Bool,
+                        let isAnimated = img["animated"] as? Bool,
+                        let image = Mapper<IMGURImage>().map(img)
+                        where isAlbum == false  && isAnimated == false {
+                        imgurImages.append(image)
                     }
                 }
+                success(imgurImages)
         }
     }
     
@@ -38,7 +54,7 @@ class IMGURApiService: NSObject {
      5. showViral
      */
     
-    class func createPath(filter:IMGURFilter, page:Int) -> String {
+    class func createPath(filter:IMGURFilter) -> String {
         var path = ""
         if let section = filter.section?.rawValue {
             path = section
@@ -55,7 +71,7 @@ class IMGURApiService: NSObject {
                 
             }
             
-            path.appendContentsOf("/\(page)")
+            path.appendContentsOf("/\(filter.page)")
             if let shouldShowViral = filter.shouldFilterViral{
                 let str = "?showViral=\(shouldShowViral.rawValue)"
                 path.appendContentsOf(str)

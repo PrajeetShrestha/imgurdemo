@@ -10,9 +10,11 @@ import Foundation
 
 enum IMGURSection:String {
     case Hot  = "hot"// Default
-    case User = "user"
     case Top  = "top"
-
+    case User = "user"
+    
+    static let allValues = [Hot, Top, User]
+    
 }
 //Only available with section
 enum IMGURSort:String {
@@ -40,10 +42,75 @@ enum IMGURShowViral:String {
     case True = "true" //Default
     case False = "false"
 }
+let kIMGURFilterDefaultKey = "kIMGURFilterDefaultKey"
 
-struct IMGURFilter {
-    var section:IMGURSection?
-    var window:IMGURWindow?
-    var sort:IMGURSort?
-    var shouldFilterViral:IMGURShowViral? = .False
+class IMGURFilter {
+    var section:IMGURSection?             = .Hot
+    var window:IMGURWindow?               = .Day
+    var sort:IMGURSort?                   = .Viral
+    var shouldFilterViral:IMGURShowViral? = .True
+    var page:Int                          = 0
+    
+    /*
+     Saves IMGURFilter object as Dictionary object into the userDefaults supplied by the client.
+     If no default object is provided then standardUserDefaults is set as default.
+     */
+    func saveToUserDefaultsAsDictionary(defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()) {
+        var filterDictionary = [String:AnyObject]()
+        filterDictionary =
+            [
+                "section":self.section!.rawValue,
+                "window":self.window!.rawValue,
+                "sort":self.sort!.rawValue,
+                "shouldFilterViral":self.shouldFilterViral!.rawValue,
+                "page":self.page
+        ]
+        defaults.setObject(filterDictionary, forKey: kIMGURFilterDefaultKey)
+    }
+    
+    
+    /*
+     Retrieves IMGURFilter object from the defaults object provided by the client.
+     Fetched from the standardUserDefaults by default.
+     */
+    class func getFilterFromUserDefaults(defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()) -> IMGURFilter? {
+        
+        guard let filterDic =  defaults.objectForKey(kIMGURFilterDefaultKey) else  {
+            return nil
+        }
+        
+        let sectionValue           = filterDic.objectForKey("section") as? String
+        let windowValue            = filterDic.objectForKey("window") as? String
+        let sortValue              = filterDic.objectForKey("sort") as? String
+        let shouldFilterViralValue = filterDic.objectForKey("shouldFilterViral") as? String
+        let pageValue              = filterDic.objectForKey("page") as? Int
+        
+        let filter = IMGURFilter()
+        filter.section           = IMGURSection.init(rawValue: sectionValue!)
+        filter.window            = IMGURWindow.init(rawValue: windowValue!)
+        filter.sort              = IMGURSort.init(rawValue: sortValue!)
+        filter.shouldFilterViral = IMGURShowViral.init(rawValue: shouldFilterViralValue!)
+        filter.page              = pageValue!
+        return filter
+    }
+    
+    
+    class func hot() -> IMGURFilter {
+        let filter = IMGURFilter()
+        return filter
+    }
+    
+    class func top() -> IMGURFilter {
+        let filter = IMGURFilter()
+        filter.section           = .Top
+        filter.window            = .Day
+        return filter
+    }
+    
+    class func user() -> IMGURFilter {
+        let filter = IMGURFilter()
+        filter.section           = .User
+        filter.sort              = .Viral
+        return filter
+    }
 }
