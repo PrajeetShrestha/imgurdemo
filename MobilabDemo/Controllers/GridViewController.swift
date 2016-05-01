@@ -33,10 +33,6 @@ class GridViewController: AbstractDisplayController {
         self.dataProvider?.insertViewsAtIndexPaths(indexPaths,updatedList: updatedList)
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        self.collectionView.collectionViewLayout.invalidateLayout()
-    }
     
 }
 

@@ -9,7 +9,8 @@
 import Foundation
 import Alamofire
 import ObjectMapper
-let kIMGURHeader  = ["Authorization": "Client-ID e4b57d1339155a7" ]
+//e4b57d1339155a7
+let kIMGURHeader  = ["Authorization": "Client-ID e4" ]
 let kIMGURBaseURL = "https://api.imgur.com/3/"
 let kIMGURGallery = kIMGURBaseURL + "gallery/"
 
@@ -25,11 +26,18 @@ class IMGURApiService: NSObject {
                 guard
                     let r = response.result.value,
                     let d = r["data"],
+                    let status = r["status"] as? Int,
                     let images = d as? [[String:AnyObject]]
-                    else
-                {
-                    failure(message: "Response not in proper format!")
-                    return
+                    where status == 200 else {
+                        
+                        if let response = response.result.value,
+                            let data = response["data"],
+                            let errorMessage = data!["error"] as? String {
+                            failure(message: errorMessage)
+                        } else {
+                            failure(message: "There is some problem in network")
+                        }
+                        return
                 }
                 
                 var imgurImages = [IMGURImage]()

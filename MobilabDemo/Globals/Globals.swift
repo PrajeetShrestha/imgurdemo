@@ -14,4 +14,4 @@ let kEndOfListReached = "kEndOfListReached"
 
 let kAppThemeColor =  UIColor(netHex:0x1A8B01)
 typealias SuccessBlock = ((response:AnyObject?) -> ())
-typealias FailureBlock = ((message:String?) -> ())
+typealias FailureBlock = ((message:String) -> ())

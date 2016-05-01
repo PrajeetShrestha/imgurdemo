@@ -29,20 +29,14 @@ class ImageGridDataProvider: NSObject, ImageGridDataProviderProtocol,CollectionV
         
     }
     
-    func rotated()
-    {
+    func rotated() {
         self.layout.invalidateLayout()
-        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
-        {
-            
+        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)) {
             self.layout.columnCount = 4
-            
         }
         
-        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
-        {
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation)) {
             self.layout.columnCount = 2
-            
         }
         
     }

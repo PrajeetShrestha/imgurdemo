@@ -13,6 +13,7 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
     weak var currentViewController: AbstractDisplayController?
     var imageList:[IMGURImage] = [IMGURImage]()
     var filter:IMGURFilter!
+    let appDelegate = UIApplication.sharedApplication()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
         layoutSegment.selectedSegmentIndex = 0
         layoutSegment.addTarget(self, action: #selector(selectedGridDesign), forControlEvents: .ValueChanged)
         self.navigationItem.titleView = layoutSegment
- 
+        
     }
     
     func endOfListReached() {
@@ -47,18 +48,23 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
     }
     
     func fetchImage(filter:IMGURFilter) {
+        self.appDelegate.networkActivityIndicatorVisible = true
         IMGURApiService().getGalleryImages(
             filter,
             success: {
                 (imgList) in
                 self.imageList = imgList!
                 self.currentViewController?.reloadViews(self.imageList)
+                self.appDelegate.networkActivityIndicatorVisible = false
             }, failure: {
                 message in
+                self.showAlertWithMessage(message, title: "Error")
+                self.appDelegate.networkActivityIndicatorVisible = false
         })
     }
     
     func fetchAdditionalImages(filter:IMGURFilter) {
+        self.appDelegate.networkActivityIndicatorVisible = true
         IMGURApiService().getGalleryImages(
             filter,
             success: {
@@ -71,8 +77,11 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
                     indexPaths.append(iPath)
                 }
                 self.currentViewController?.insertViewsAtIndexPaths(indexPaths,updatedList: self.imageList)
+                self.appDelegate.networkActivityIndicatorVisible = false
             }, failure: {
                 message in
+                self.showAlertWithMessage(message, title: "Error")
+                self.appDelegate.networkActivityIndicatorVisible = false
         })
     }
     
@@ -141,5 +150,14 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
     //MARK: FilterViewControllerDelegate
     func filterSelected(filter:IMGURFilter) {
         self.fetchImage(filter)
+    }
+}
+
+extension ContainerViewController {
+    func showAlertWithMessage(message:String, title:String) {
+        let alert = UIAlertController(title: title, message:message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+        self.presentViewController(alert, animated: true){}
+        
     }
 }
