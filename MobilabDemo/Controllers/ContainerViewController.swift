@@ -20,6 +20,17 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
         self.filter = self.setupInitialFilter()
         self.fetchImage(self.filter)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(endOfListReached), name: kEndOfListReached, object: nil)
+        self.setupSegmentedControl()
+    }
+    
+    func setupSegmentedControl() {
+        let layoutSegment:UISegmentedControl = UISegmentedControl(items:["List","Grid"])
+        layoutSegment.frame = CGRectMake(0, 0, 160, 30)
+        layoutSegment.tintColor = kAppThemeColor
+        layoutSegment.selectedSegmentIndex = 0
+        layoutSegment.addTarget(self, action: #selector(selectedGridDesign), forControlEvents: .ValueChanged)
+        self.navigationItem.titleView = layoutSegment
+ 
     }
     
     func endOfListReached() {

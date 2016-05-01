@@ -29,5 +29,11 @@ class GridViewController: AbstractDisplayController {
     override     func insertViewsAtIndexPaths(indexPaths:[NSIndexPath], updatedList:[IMGURImage]) {
         self.dataProvider?.insertViewsAtIndexPaths(indexPaths,updatedList: updatedList)
     }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        self.collectionView.collectionViewLayout.invalidateLayout()
+    }
+
 }
 

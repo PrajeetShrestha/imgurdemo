@@ -29,7 +29,7 @@ class FilterViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Filter Settings"
         self.populateUIForFilter(self.filter)
-        print("Fetched filter with value \(self.filter.description())")
+        //print("Fetched filter with value \(self.filter.description())")
     }
     
     func populateUIForFilter(fltr:IMGURFilter) {
@@ -102,7 +102,7 @@ extension FilterViewController {
     
     @IBAction func doneAction(sender: AnyObject) {
         if let delegate = self.delegate {
-            print("Saving filter with value \(self.filter.description())")
+            //print("Saving filter with value \(self.filter.description())")
             self.filter.saveToUserDefaultsAsDictionary()
             delegate.filterSelected(self.filter!)
             self.navigationController?.popViewControllerAnimated(true)

@@ -13,7 +13,7 @@
 		B69EBFC21CD1A4850062219F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFC11CD1A4850062219F /* Assets.xcassets */; };
 		B69EBFC51CD1A4850062219F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69EBFC31CD1A4850062219F /* LaunchScreen.storyboard */; };
 		B69EBFE01CD23A210062219F /* IMGURImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69EBFDF1CD23A210062219F /* IMGURImage.swift */; };
-		B6AD0EC01CD253BF006392E6 /* CustomDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD0EBF1CD253BF006392E6 /* CustomDataTypes.swift */; };
+		B6AD0EC01CD253BF006392E6 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD0EBF1CD253BF006392E6 /* Globals.swift */; };
 		B6BD75151CD2E3D6003396C7 /* ContainerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD75141CD2E3D6003396C7 /* ContainerViewControllerTests.swift */; };
 		B6BD751B1CD2E721003396C7 /* IMGURApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */; };
 		B6BD751D1CD2F38B003396C7 /* FilterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD751C1CD2F38B003396C7 /* FilterViewControllerTests.swift */; };
@@ -31,6 +31,7 @@
 		B6C66D0D1CD45FA3001503E1 /* AbstractDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D0C1CD45FA3001503E1 /* AbstractDisplayController.swift */; };
 		B6C66D0F1CD4FFD9001503E1 /* IMGURFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D0E1CD4FFD9001503E1 /* IMGURFilterTests.swift */; };
 		B6C66D121CD5AA4A001503E1 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D111CD5AA4A001503E1 /* GridCell.swift */; };
+		B6C66D151CD5BEB4001503E1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C66D141CD5BEB4001503E1 /* Utils.swift */; };
 		D45F8AD0A9B896C1DD518C15 /* Pods_MobilabDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AEA9A936DAF3BE0A87C4DC /* Pods_MobilabDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +58,7 @@
 		B69EBFCB1CD1A4850062219F /* MobilabDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilabDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69EBFD11CD1A4850062219F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B69EBFDF1CD23A210062219F /* IMGURImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURImage.swift; sourceTree = "<group>"; };
-		B6AD0EBF1CD253BF006392E6 /* CustomDataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDataTypes.swift; sourceTree = "<group>"; };
+		B6AD0EBF1CD253BF006392E6 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		B6AD0EC31CD27C2E006392E6 /* IMGURFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURFilter.swift; sourceTree = "<group>"; };
 		B6BD75141CD2E3D6003396C7 /* ContainerViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerTests.swift; sourceTree = "<group>"; };
 		B6BD751A1CD2E721003396C7 /* IMGURApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURApiService.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		B6C66D0C1CD45FA3001503E1 /* AbstractDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDisplayController.swift; sourceTree = "<group>"; };
 		B6C66D0E1CD4FFD9001503E1 /* IMGURFilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGURFilterTests.swift; sourceTree = "<group>"; };
 		B6C66D111CD5AA4A001503E1 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		B6C66D141CD5BEB4001503E1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		EE6055BBF9DA189BFC458B57 /* Pods-MobilabDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilabDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilabDemo/Pods-MobilabDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +168,8 @@
 		B6AD0EBE1CD253BF006392E6 /* Globals */ = {
 			isa = PBXGroup;
 			children = (
-				B6AD0EBF1CD253BF006392E6 /* CustomDataTypes.swift */,
+				B6AD0EBF1CD253BF006392E6 /* Globals.swift */,
+				B6C66D141CD5BEB4001503E1 /* Utils.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -369,7 +372,7 @@
 				B69EBFC01CD1A4850062219F /* MobilabDemo.xcdatamodeld in Sources */,
 				B6C66D121CD5AA4A001503E1 /* GridCell.swift in Sources */,
 				B6BD75361CD3D489003396C7 /* ImageListCell.swift in Sources */,
-				B6AD0EC01CD253BF006392E6 /* CustomDataTypes.swift in Sources */,
+				B6AD0EC01CD253BF006392E6 /* Globals.swift in Sources */,
 				B6BD75241CD2FF79003396C7 /* ContainerViewController.swift in Sources */,
 				B6BD75251CD2FF79003396C7 /* FilterViewController.swift in Sources */,
 				B6BD752F1CD3B5DF003396C7 /* ImageListDataProvider.swift in Sources */,
@@ -377,6 +380,7 @@
 				B6BD751E1CD2FF1A003396C7 /* IMGURFilter.swift in Sources */,
 				B6BD75271CD2FF79003396C7 /* ListViewController.swift in Sources */,
 				B69EBFE01CD23A210062219F /* IMGURImage.swift in Sources */,
+				B6C66D151CD5BEB4001503E1 /* Utils.swift in Sources */,
 				B6BD75261CD2FF79003396C7 /* GridViewController.swift in Sources */,
 				B6BD75331CD3C2B0003396C7 /* ImageGridDataProvider.swift in Sources */,
 				B6BD75311CD3C27B003396C7 /* ImageGridDataProviderProtocol.swift in Sources */,

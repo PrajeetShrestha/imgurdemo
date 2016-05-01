@@ -45,7 +45,6 @@ extension ImageListDataProvider: UITableViewDataSource {
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == imageList.count - 1 {
-            print(self.tableView.numberOfRowsInSection(0))
             NSNotificationCenter.defaultCenter().postNotificationName(kEndOfListReached, object: nil)
         }
     }

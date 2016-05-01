@@ -11,6 +11,8 @@ import UIKit
 class ImageGridDataProvider: NSObject, ImageGridDataProviderProtocol {
     weak var collectionView: UICollectionView!
     var imageList:[IMGURImage] = [IMGURImage]()
+    
+    
 }
 
 extension ImageGridDataProvider: UICollectionViewDataSource {
