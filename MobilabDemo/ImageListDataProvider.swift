@@ -26,13 +26,6 @@ extension ImageListDataProvider {
         return self.imageList.count
     }
     
-//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        let image       = self.imageList[indexPath.row]
-//        let scaleFactor = CGFloat(image.height! / image.width!)
-//        let height = tableView.frame.size.width * CGFloat(scaleFactor)
-//        return height
-//    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.controller.storyboard?.instantiateViewControllerWithIdentifier("DetailController") as! DetailController
         detailController.image = self.imageList[indexPath.row]

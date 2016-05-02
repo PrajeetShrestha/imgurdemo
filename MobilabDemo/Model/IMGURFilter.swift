@@ -87,6 +87,7 @@ class IMGURFilter {
     /*
      Retrieves IMGURFilter object from the defaults object provided by the client.
      Fetched from the standardUserDefaults by default.
+     This method will return a default filter if no filters found stored in user defaults previously.
      */
     class func getFilterFromUserDefaults(defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()) -> IMGURFilter? {
         

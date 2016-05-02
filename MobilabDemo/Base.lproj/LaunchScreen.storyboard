@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgur" translatesAutoresizingMaskIntoConstraints="NO" id="lc2-U5-ako">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Sp8-5S-PVk"/>
+                                    <constraint firstAttribute="width" secondItem="lc2-U5-ako" secondAttribute="height" multiplier="15:8" id="dyL-MB-Rxh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYA-yd-JCv">
+                                <rect key="frame" x="332" y="324" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1584405637254902" green="0.1584405637254902" blue="0.1584405637254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lc2-U5-ako" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3qf-LV-HKj"/>
+                            <constraint firstItem="lc2-U5-ako" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="f9o-Kp-MyJ"/>
+                            <constraint firstItem="hYA-yd-JCv" firstAttribute="top" secondItem="lc2-U5-ako" secondAttribute="bottom" constant="-40" id="sOl-YU-y1U"/>
+                            <constraint firstItem="hYA-yd-JCv" firstAttribute="trailing" secondItem="lc2-U5-ako" secondAttribute="trailing" constant="-40" id="yGL-AL-pfz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +46,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imgur" width="600" height="315"/>
+    </resources>
 </document>

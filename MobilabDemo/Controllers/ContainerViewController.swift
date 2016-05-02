@@ -41,7 +41,8 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
     
     func setupInitialFilter() -> IMGURFilter {
         guard let fltr = IMGURFilter.getFilterFromUserDefaults() else {
-            //Returns defailt filter
+            //Returns defailt filter and save filter to User Default. this will be triggered only once.
+            IMGURFilter().saveToUserDefaultsAsDictionary()
             return IMGURFilter()
         }
         return fltr
@@ -113,13 +114,10 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
         oldViewController.willMoveToParentViewController(nil)
         self.addChildViewController(newViewController)
         self.addSubview(newViewController.view, toView:self.container)
-        // TODO: Set the starting state of your constraints here
+        
         newViewController.view.layoutIfNeeded()
-        
-        // TODO: Set the ending state of your constraints here
-        
         UIView.animateWithDuration(0.5, animations: {
-            // only need to call layoutIfNeeded here
+            
             newViewController.view.layoutIfNeeded()
             },
                                    completion: { finished in
@@ -142,13 +140,14 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
-        let filterController = segue.destinationViewController as? FilterViewController
+        let filterController       = segue.destinationViewController as? FilterViewController
         filterController?.delegate = self
         filterController?.filter   = IMGURFilter.getFilterFromUserDefaults()
         
     }
     //MARK: FilterViewControllerDelegate
     func filterSelected(filter:IMGURFilter) {
+        
         self.fetchImage(filter)
     }
 }
