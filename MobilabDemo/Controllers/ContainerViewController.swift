@@ -70,13 +70,12 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
             filter,
             success: {
                 (imgList) in
-                var indexPaths = [NSIndexPath]()
-                let initialImgeListCount = self.imageList.count
-                self.imageList.appendContentsOf(imgList!)
-                for i in  initialImgeListCount ..< self.imageList.count {
-                    let iPath = NSIndexPath(forRow: i, inSection: 0)
-                    indexPaths.append(iPath)
+                if imgList!.count == 0 {
+                    //Reverse the page increment
+                    self.filter.page = -1
+                    return
                 }
+                let indexPaths = self.appendNewImagesAndGetIndexPathForNewImages(imgList!)
                 self.currentViewController?.insertViewsAtIndexPaths(indexPaths,updatedList: self.imageList)
                 self.appDelegate.networkActivityIndicatorVisible = false
             }, failure: {
@@ -84,6 +83,17 @@ class ContainerViewController: UIViewController, FilterViewControllerDelegate {
                 self.showAlertWithMessage(message, title: "Error")
                 self.appDelegate.networkActivityIndicatorVisible = false
         })
+    }
+    
+    func appendNewImagesAndGetIndexPathForNewImages(newImages:[IMGURImage]) -> [NSIndexPath] {
+        var indexPaths = [NSIndexPath]()
+        let initialImgeListCount = self.imageList.count
+        self.imageList.appendContentsOf(newImages)
+        for i in  initialImgeListCount ..< self.imageList.count {
+            let iPath = NSIndexPath(forRow: i, inSection: 0)
+            indexPaths.append(iPath)
+        }
+        return indexPaths
     }
     
     func setUpInitialController() {

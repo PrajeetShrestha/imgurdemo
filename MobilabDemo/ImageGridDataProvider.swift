@@ -25,6 +25,14 @@ class ImageGridDataProvider: NSObject, ImageGridDataProviderProtocol,CollectionV
         layout.minimumColumnSpacing = 10
         layout.minimumInteritemSpacing = 10
         layout.columnCount = 2
+        
+        if UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation) {
+            layout.columnCount = 4
+        }
+        
+        if UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation) {
+            layout.columnCount = 2
+        }
         self.collectionView.collectionViewLayout = layout
         
     }
